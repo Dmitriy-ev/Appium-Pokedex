@@ -13,6 +13,9 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation ("io.appium:java-client:7.5.1")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+
 }
 
 tasks.test {

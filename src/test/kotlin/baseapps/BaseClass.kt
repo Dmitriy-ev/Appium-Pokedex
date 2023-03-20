@@ -1,17 +1,14 @@
-import core.enums.DeviceConfiguration
-import core.enums.Platform
+package baseapps
+
+import core.DeviceConfiguration
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileElement
-import io.appium.java_client.android.AndroidDriver
-import org.aspectj.lang.annotation.Before
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
-import org.openqa.selenium.remote.DesiredCapabilities
-import org.openqa.selenium.remote.RemoteWebDriver
 import java.net.MalformedURLException
-import java.net.URL
+import java.util.concurrent.TimeUnit
 
-class BaseClass<T :BaseApp> {
+open class BaseClass<T : BaseApp> {
     var adriver: AppiumDriver<MobileElement>? = null
     lateinit var app: T
 
@@ -21,6 +18,7 @@ class BaseClass<T :BaseApp> {
         adriver = DeviceConfiguration.configDriver(
             appPath = "/Users/dmitrii.evmenov/Desktop/app-debug.apk"
         )
+        adriver!!.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
         app = BaseApp().createApp(adriver) as T
     }
 
