@@ -10,10 +10,9 @@ abstract class AndroidMobileScreen<T>(val driver: AppiumDriver<MobileElement>?) 
          this.click()
     }
 
-    fun MobileElement.validate(expectedText: String){
+    fun MobileElement.verify(expectedText: String){
         if (expectedText != this.text) {
             fail(message = "${this.text} is not equal $expectedText")
         }
     }
-
 }

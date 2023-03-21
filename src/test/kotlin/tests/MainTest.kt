@@ -12,19 +12,8 @@ class MainTest : BaseClass<AndroidBaseApp>() {
                 "are you looking for?"
         with(app) {
             aMainScreen.run {
-                validateTitle(expectedMessage)
+                verifyTitle(expectedMessage)
             }
-        }
-    }
-
-    @Test
-    fun checkNewsTitle(){
-        val expectedMessage = TODO()
-        with(app){
-            aMainScreen
-                .clickNews()
-            aNewsScreen
-                .validateNewsTitle(expectedMessage)
         }
     }
 }

@@ -2,6 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.8.10"
+    id("io.qameta.allure") version "2.11.2"
+
 }
 
 group = "org.example"
@@ -18,8 +20,15 @@ dependencies {
 
 }
 
+allure {
+    report {
+        version.set("2.20.0")
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
+    finalizedBy("allureReport")
 }
 
 tasks.withType<KotlinCompile> {
