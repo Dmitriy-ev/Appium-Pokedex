@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Tue Mar 21 17:12:41 MSK 2023","Tue Mar 21 17:12:49 MSK 2023","7734","","tests.NewsTest","","tests.NewsTest","checkNewsTitle","checkNewsTitle()",""
+"passed","Tue Mar 21 15:56:12 MSK 2023","Tue Mar 21 15:56:21 MSK 2023","8236","","tests.MainTest","","tests.MainTest","checkNewsTitle","checkNewsTitle()",""
+"passed","Tue Mar 21 16:01:19 MSK 2023","Tue Mar 21 16:01:29 MSK 2023","9382","","tests.MainTest","","tests.MainTest","chh","chh()",""
+"passed","Tue Mar 21 17:12:27 MSK 2023","Tue Mar 21 17:12:36 MSK 2023","8436","","tests.MainTest","","tests.MainTest","checkTitle","checkTitle()",""
+"passed","Tue Mar 21 17:12:54 MSK 2023","Tue Mar 21 17:13:03 MSK 2023","9178","","tests.PokedexTest","","tests.PokedexTest","openSearchBar","openSearchBar()",""
