@@ -6,7 +6,7 @@ import screen.MainScreen
 import screen.NewsScreen
 import screen.PokedexScreen
 
-class AndroidBaseApp(val driver: AppiumDriver<MobileElement>): BaseApp() {
+class AndroidBaseApp(val driver: AppiumDriver<MobileElement>) {
 
     val aMainScreen = MainScreen(driver)
     val aNewsScreen = NewsScreen(driver)

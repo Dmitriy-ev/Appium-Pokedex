@@ -3,11 +3,7 @@ package baseapps
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileElement
 
-open class BaseApp {
+abstract class BaseApp {
 
-    fun createApp(
-        adriver: AppiumDriver<MobileElement>?,
-    ): BaseApp {
-        return AndroidBaseApp(adriver!!)
-    }
+    abstract fun createApp(adriver: AppiumDriver<MobileElement>?): AndroidBaseApp
 }

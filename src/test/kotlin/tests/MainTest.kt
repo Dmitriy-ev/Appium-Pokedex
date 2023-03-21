@@ -1,10 +1,9 @@
 package tests
 
-import baseapps.AndroidBaseApp
 import baseapps.BaseClass
 import org.junit.jupiter.api.Test
 
-class MainTest : BaseClass<AndroidBaseApp>() {
+class MainTest : BaseClass() {
 
     @Test
     fun checkTitle() {

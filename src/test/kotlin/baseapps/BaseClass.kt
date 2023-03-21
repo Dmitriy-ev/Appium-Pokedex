@@ -8,18 +8,17 @@ import org.junit.jupiter.api.BeforeEach
 import java.net.MalformedURLException
 import java.util.concurrent.TimeUnit
 
-open class BaseClass<T : BaseApp> {
+open class BaseClass: BaseApp() {
+
     var adriver: AppiumDriver<MobileElement>? = null
-    lateinit var app: T
+    lateinit var app: AndroidBaseApp
 
     @BeforeEach
     @Throws(MalformedURLException::class)
     fun setUp() {
-        adriver = DeviceConfiguration.configDriver(
-            appPath = "/Users/dmitrii.evmenov/Desktop/app-debug.apk"
-        )
+        adriver = DeviceConfiguration.configDriver(appPath = "/Users/dmitrii.evmenov/Desktop/app-debug.apk")
         adriver!!.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
-        app = BaseApp().createApp(adriver) as T
+        app = createApp(adriver)
     }
 
     @AfterEach
@@ -27,5 +26,7 @@ open class BaseClass<T : BaseApp> {
         adriver?.quit()
     }
 
-
+    override fun createApp(adriver: AppiumDriver<MobileElement>?): AndroidBaseApp {
+        return AndroidBaseApp(adriver!!)
+    }
 }

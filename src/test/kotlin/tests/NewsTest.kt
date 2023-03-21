@@ -1,10 +1,9 @@
 package tests
 
-import baseapps.AndroidBaseApp
 import baseapps.BaseClass
 import org.junit.jupiter.api.Test
 
-class NewsTest : BaseClass<AndroidBaseApp>() {
+class NewsTest : BaseClass() {
 
     @Test
     fun checkNewsTitle() {

@@ -1,10 +1,9 @@
 package tests
 
-import baseapps.AndroidBaseApp
 import baseapps.BaseClass
 import org.junit.jupiter.api.Test
 
-class PokedexTest : BaseClass<AndroidBaseApp>() {
+class PokedexTest : BaseClass() {
 
     @Test
     fun openSearchBar() {
